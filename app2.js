@@ -66,3 +66,30 @@ manchester.randomNumber = function() {
     let max = this.maxCustomers;
     return Math.floor(Math.random()* (max-min) + min);
 };
+
+// Checking it's worked
+console.log(liverpool.randomNumber());
+
+liverpool.customersVisited = function() {
+    return this.randomNumber();
+}
+
+norwich.customersVisited = function() {
+    return this.randomNumber();
+}
+
+london.customersVisited = function() {
+    return this.randomNumber();
+}
+
+birmingham.customersVisited = function() {
+    return this.randomNumber();
+}
+
+manchester.customersVisited = function() {
+    return this.randomNumber();
+}
+
+// Checking it's worked
+console.log(liverpool.customersVisited());
+console.log(norwich.customersVisited());
