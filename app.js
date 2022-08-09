@@ -1,72 +1,107 @@
-let Seattle = {};
-let Tokyo = {};
-let Dubai = {};
-let Paris = {};
-let Lima = {};
+// Created locations as objects
+let norwich     = {};
+let london      = {};
+let manchester  = {};
+let birmingham  = {};
+let liverpool   = {};
 
-const locations = [Seattle, Tokyo, Dubai, Paris, Lima];
+// Checking what's what
+console.log(typeof(norwich));
+console.log(norwich);
 
-// console.log(locations);
+// Methods created to give values to all location
+liverpool.minCustomers                      = 16;
+liverpool.maxCustomers                      = 78;
+liverpool.averageCookiesSoldPerCustomer     = 4;
 
-Seattle.minPerCustomer = 23;
-Seattle.maxPerCustomer = 65;
-Seattle.averagePerCustomer = (Seattle.minPerCustomer + Seattle.maxPerCustomer) /2;
+norwich.minCustomers                        = 33;
+norwich.maxCustomers                        = 56;
+norwich.averageCookiesSoldPerCustomer       = 4;
 
-Tokyo.minPerCustomer = 3;
-Tokyo.maxPerCustomer = 24;
-Tokyo.averagePerCustomer = (Tokyo.minPerCustomer + Tokyo.maxPerCustomer) /2;
+london.minCustomers                         = 25;
+london.maxCustomers                         = 45;
+london.averageCookiesSoldPerCustomer        = 4;
 
-Dubai.minPerCustomer = 11;
-Dubai.maxPerCustomer = 38;
-Dubai.averagePerCustomer = (Dubai.minPerCustomer + Dubai.maxPerCustomer) /2;
+birmingham.minCustomers                     = 55;
+birmingham.maxCustomers                     = 89;
+birmingham.averageCookiesSoldPerCustomer    = 4;
 
-Paris.minPerCustomer = 20;
-Paris.maxPerCustomer = 38;
-Paris.averagePerCustomer = (Paris.minPerCustomer + Paris.maxPerCustomer) /2;
+manchester.minCustomers                     = 4;
+manchester.maxCustomers                     = 12;
+manchester.averageCookiesSoldPerCustomer    = 4;
 
-Lima.minPerCustomer = 2;
-Lima.maxPerCustomer = 16;
-Lima.averagePerCustomer = (Paris.minPerCustomer + Paris.maxPerCustomer) /2;
+// Locations into array
+const locations = [norwich, london, manchester, birmingham, liverpool];
 
+// Checking it's worked
+console.log(locations);
+
+// Create a random number between min and max.
+liverpool.randomNumber = function() {
+    let min = this.minCustomers;
+    let max = this.maxCustomers;
+    return Math.floor(Math.random()* (max-min) + min);
+};
+
+norwich.randomNumber = function() {
+    let min = this.minCustomers;
+    let max = this.maxCustomers;
+    return Math.floor(Math.random()* (max-min) + min);
+};
+
+london.randomNumber = function() {
+    let min = this.minCustomers;
+    let max = this.maxCustomers;
+    return Math.floor(Math.random()* (max-min) + min);
+};
+
+birmingham.randomNumber = function() {
+    let min = this.minCustomers;
+    let max = this.maxCustomers;
+    return Math.floor(Math.random()* (max-min) + min);
+};
+
+manchester.randomNumber = function() {
+    let min = this.minCustomers;
+    let max = this.maxCustomers;
+    return Math.floor(Math.random()* (max-min) + min);
+};
+
+// Checking it's worked
+console.log(liverpool.randomNumber());
+
+liverpool.customersVisited = function() {
+    return this.randomNumber();
+}
+
+norwich.customersVisited = function() {
+    return this.randomNumber();
+}
+
+london.customersVisited = function() {
+    return this.randomNumber();
+}
+
+birmingham.customersVisited = function() {
+    return this.randomNumber();
+}
+
+manchester.customersVisited = function() {
+    return this.randomNumber();
+}
+
+// Checking it's worked
+console.log(liverpool.customersVisited());
+console.log(norwich.customersVisited());
+
+console.log('Break');
+
+// For loop to console log all locations and total cookies told during each hour.
 for (let i = 0; i < locations.length; i++) {
-    locations[i].randomNumber = function(min, max) {
-        min = this.minPerCustomer;
-        max = this.maxPerCustomer;
-        return Math.floor(Math.random() * (max - min) + min);
+    console.log('LOCATION ' + i);
+    for ( let j = 8; j <= 16; j++) {
+        const customers = locations[i].customersVisited();
+        console.log('Time at ' + j);
+        console.log('Total Cookies Sold ' + locations[i].averageCookiesSoldPerCustomer * customers);
     }
 }
-
-
-// console.log(locations[4].randomNumber());
-
-Seattle.cookiesSold = function() {
-    const customer = this.randomNumber();
-    const cookies = this.averagePerCustomer;
-    return cookies * customer;
-}
-
-Tokyo.cookiesSold = function() {
-    const customer = this.randomNumber();
-    const cookies = this.averagePerCustomer;
-    return cookies * customer;
-}
-
-Dubai.cookiesSold = function() {
-    const customer = this.randomNumber();
-    const cookies = this.averagePerCustomer;
-    return cookies * customer;
-}
-
-Paris.cookiesSold = function() {
-    const customer = this.randomNumber();
-    const cookies = this.averagePerCustomer;
-    return cookies * customer;
-}
-
-Lima.cookiesSold = function() {
-    const customer = this.randomNumber();
-    const cookies = this.averagePerCustomer;
-    return cookies * customer;
-}
-
-console.log(locations[0].cookiesSold())
