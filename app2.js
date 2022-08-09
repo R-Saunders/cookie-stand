@@ -96,7 +96,10 @@ console.log(norwich.customersVisited());
 
 console.log('Break');
 
-// For loop to console log all locations
+// For loop to console log all locations - added for loop inside prinitng more numbers.
 for (let i = 0; i < locations.length; i++) {
     console.log(locations[i]);
+    for ( let i = 8; i <= 16; i++) {
+        console.log(i);
+    }
 }
