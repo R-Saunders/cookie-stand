@@ -93,3 +93,10 @@ manchester.customersVisited = function() {
 // Checking it's worked
 console.log(liverpool.customersVisited());
 console.log(norwich.customersVisited());
+
+console.log('Break');
+
+// For loop to console log all locations
+for (let i = 0; i < locations.length; i++) {
+    console.log(locations[i]);
+}
