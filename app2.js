@@ -36,9 +36,33 @@ const locations = [norwich, london, manchester, birmingham, liverpool];
 // Checking it's worked
 console.log(locations);
 
-// Create a random number up to 100.
+// Create a random number between min and max.
 liverpool.randomNumber = function() {
-    return Math.floor(Math.random()*100);
+    let min = this.minCustomers;
+    let max = this.maxCustomers;
+    return Math.floor(Math.random()* (max-min) + min);
 };
-// Checking it worked
-console.log(liverpool.randomNumber());
+
+norwich.randomNumber = function() {
+    let min = this.minCustomers;
+    let max = this.maxCustomers;
+    return Math.floor(Math.random()* (max-min) + min);
+};
+
+london.randomNumber = function() {
+    let min = this.minCustomers;
+    let max = this.maxCustomers;
+    return Math.floor(Math.random()* (max-min) + min);
+};
+
+birmingham.randomNumber = function() {
+    let min = this.minCustomers;
+    let max = this.maxCustomers;
+    return Math.floor(Math.random()* (max-min) + min);
+};
+
+manchester.randomNumber = function() {
+    let min = this.minCustomers;
+    let max = this.maxCustomers;
+    return Math.floor(Math.random()* (max-min) + min);
+};
