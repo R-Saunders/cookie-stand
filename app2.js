@@ -96,10 +96,12 @@ console.log(norwich.customersVisited());
 
 console.log('Break');
 
-// For loop to console log all locations - added for loop inside prinitng more numbers.
+// For loop to console log all locations and total cookies told during each hour.
 for (let i = 0; i < locations.length; i++) {
-    console.log(locations[i]);
+    console.log('LOCATION ' + i);
     for ( let j = 8; j <= 16; j++) {
-        console.log(j);
+        const customers = locations[i].customersVisited();
+        console.log('Time at ' + j);
+        console.log('Total Cookies Sold ' + locations[i].averageCookiesSoldPerCustomer * customers);
     }
 }
