@@ -1,18 +1,22 @@
 console.log('Classes & Constructors');
 
 // Create mother function
-function locationsClass(name, min, max, avgCookies) {
-  this.name                           = name;
-  this.minCustomers                   = min;
-  this.maxCustomers                   = max;
-  this.averageCookiesSoldPerCustomer  = avgCookies;
-  this.randomNumber                   = function () {
-    return Math.floor(Math.random() * (max-min) + min);
+class locationsClass {
+  // constructor
+  constructor(name, min, max, avgCookies) {
+    this.name                           = name;
+    this.minCustomers                   = min;
+    this.maxCustomers                   = max;
+    this.averageCookiesSoldPerCustomer  = avgCookies;
+  }
+
+  randomNumber() {
+    return Math.floor(Math.random() * (this.maxCustomers-this.minCustomers) + this.minCustomers);
   };
-  this.customerVisited                = function () {
+  customerVisited() {
     return this.randomNumber();
   };
-  this.totalCookies                 = function () {
+  totalCookies() {
     return this.customerVisited() * this.averageCookiesSoldPerCustomer;
   };
 }
@@ -30,6 +34,6 @@ locations = [norwich, london, manchester, birmingham, liverpool];
 // Nest for loops to print required info
 for (let i = 0; i < locations.length; i++) {
   for (let j = 8; j <= 16; j++) {
-    console.log(locations[i].customerVisited() + ' customers visited ' + locations[i].name + ' and purchased a total of ' + locations[i].totalCookies() + ' cookies between ' + j + ':00 - ' + (j+1) + ':00');
+    console.log(locations[i].customerVisited() + ' customers visited the ' + locations[i].name + ' store and purchased a total of ' + locations[i].totalCookies() + ' cookies between ' + j + ':00 - ' + (j+1) + ':00');
   }
 }
