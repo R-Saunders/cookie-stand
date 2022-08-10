@@ -10,6 +10,9 @@ function locationsClass(min, max, avgCookies) {
   this.customerVisited                = function () {
     return this.randomNumber();
   };
+  this.totalCookies                 = function () {
+    return this.customerVisited() * this.averageCookiesSoldPerCustomer;
+  }
 }
 
 // Created locations as objects
@@ -21,31 +24,7 @@ let liverpool   = new locationsClass(4,12,4);
 
 // Checking what's what
 console.log(norwich);
-console.log(norwich.randomNumber());
-
-// liverpool.customersVisited = function() {
-//     return this.randomNumber();
-// }
-
-// norwich.customersVisited = function() {
-//     return this.randomNumber();
-// }
-
-// london.customersVisited = function() {
-//     return this.randomNumber();
-// }
-
-// birmingham.customersVisited = function() {
-//     return this.randomNumber();
-// }
-
-// manchester.customersVisited = function() {
-//     return this.randomNumber();
-// }
-
-// // Checking it's worked
-// console.log(liverpool.customersVisited());
-// console.log(norwich.customersVisited());
+console.log(norwich.totalCookies());
 
 // console.log('Break');
 
