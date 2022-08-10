@@ -6,7 +6,10 @@ function locationsClass(min, max, avgCookies) {
   this.averageCookiesSoldPerCustomer  = avgCookies;
   this.randomNumber                   = function () {
     return Math.floor(Math.random() * (max-min) + min);
-  }
+  };
+  this.customerVisited                = function () {
+    return this.randomNumber();
+  };
 }
 
 // Created locations as objects
@@ -19,46 +22,6 @@ let liverpool   = new locationsClass(4,12,4);
 // Checking what's what
 console.log(norwich);
 console.log(norwich.randomNumber());
-
-// // Locations into array
-// const locations = [norwich, london, manchester, birmingham, liverpool];
-
-// // Checking it's worked
-// console.log(locations);
-
-// // Create a random number between min and max.
-// liverpool.randomNumber = function() {
-//     let min = this.minCustomers;
-//     let max = this.maxCustomers;
-//     return Math.floor(Math.random()* (max-min) + min);
-// };
-
-// norwich.randomNumber = function() {
-//     let min = this.minCustomers;
-//     let max = this.maxCustomers;
-//     return Math.floor(Math.random()* (max-min) + min);
-// };
-
-// london.randomNumber = function() {
-//     let min = this.minCustomers;
-//     let max = this.maxCustomers;
-//     return Math.floor(Math.random()* (max-min) + min);
-// };
-
-// birmingham.randomNumber = function() {
-//     let min = this.minCustomers;
-//     let max = this.maxCustomers;
-//     return Math.floor(Math.random()* (max-min) + min);
-// };
-
-// manchester.randomNumber = function() {
-//     let min = this.minCustomers;
-//     let max = this.maxCustomers;
-//     return Math.floor(Math.random()* (max-min) + min);
-// };
-
-// // Checking it's worked
-// console.log(liverpool.randomNumber());
 
 // liverpool.customersVisited = function() {
 //     return this.randomNumber();
