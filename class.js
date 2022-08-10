@@ -1,6 +1,8 @@
 console.log('Classes & Constructors');
 
-function locationsClass(min, max, avgCookies) {
+// Create mother function
+function locationsClass(name, min, max, avgCookies) {
+  this.name                           = name;
   this.minCustomers                   = min;
   this.maxCustomers                   = max;
   this.averageCookiesSoldPerCustomer  = avgCookies;
@@ -12,29 +14,22 @@ function locationsClass(min, max, avgCookies) {
   };
   this.totalCookies                 = function () {
     return this.customerVisited() * this.averageCookiesSoldPerCustomer;
-  }
+  };
 }
 
 // Created locations as objects
-let norwich     = new locationsClass(16,78,4);
-let london      = new locationsClass(33,56,4);
-let manchester  = new locationsClass(25,45,4);
-let birmingham  = new locationsClass(55,89,4);
-let liverpool   = new locationsClass(4,12,4);
+let norwich     = new locationsClass('Norwich',16,78,4);
+let london      = new locationsClass('London',33,56,4);
+let manchester  = new locationsClass('Manchester',25,45,4);
+let birmingham  = new locationsClass('Birmingham',55,89,4);
+let liverpool   = new locationsClass('Liverpool',4,12,4);
 
-// Checking what's what
-console.log(norwich);
-console.log(norwich.totalCookies());
+// Put objects into array
+locations = [norwich, london, manchester, birmingham, liverpool];
 
-// console.log('Break');
-
-// // For loop to console log all locations and total cookies told during each hour.
-// for (let i = 0; i < locations.length; i++) {
-//     console.log('LOCATION ' + i);
-//     for ( let j = 8; j <= 16; j++) {
-//         const customers = locations[i].customersVisited();
-//         console.log('Time at ' + j);
-//         console.log('Total Cookies Sold ' + locations[i].averageCookiesSoldPerCustomer * customers);
-//     }
-// }
-
+// Nest for loops to print required info
+for (let i = 0; i < locations.length; i++) {
+  for (let j = 8; j <= 16; j++) {
+    console.log(locations[i].customerVisited() + ' customers visited ' + locations[i].name + ' and purchased a total of ' + locations[i].totalCookies() + ' cookies between ' + j + ':00 - ' + (j+1) + ':00');
+  }
+}
