@@ -4,6 +4,9 @@ function locationsClass(min, max, avgCookies) {
   this.minCustomers                   = min;
   this.maxCustomers                   = max;
   this.averageCookiesSoldPerCustomer  = avgCookies;
+  this.randomNumber                   = function () {
+    return Math.floor(Math.random() * (max-min) + min);
+  }
 }
 
 // Created locations as objects
@@ -15,6 +18,7 @@ let liverpool   = new locationsClass(4,12,4);
 
 // Checking what's what
 console.log(norwich);
+console.log(norwich.randomNumber());
 
 // // Locations into array
 // const locations = [norwich, london, manchester, birmingham, liverpool];
