@@ -37,9 +37,15 @@ for (let i = 0; i < locations.length; i++) {
     console.log(locations[i].customerVisited() + ' customers visited the ' + locations[i].name + ' store and purchased a total of ' + locations[i].totalCookies() + ' cookies between ' + j + ':00 - ' + (j+1) + ':00');
   }
 }
-
 var form = document.getElementById("new_cookie_stand");
-function handleForm(event) { 
-  event.preventDefault(); 
-} 
-form.addEventListener('submit', handleForm);
+  function handleForm(event) { 
+    event.preventDefault();
+    let city1 = document.getElementById("city").value;
+    let minimum1 =  parseInt(document.getElementById("minimum").value);
+    let maximum1 = parseInt(document.getElementById("maximum").value);
+    let cookies1 = parseInt(document.getElementById("cookies").value);
+    let newlocation = new locationsClass(city1, minimum1, maximum1, cookies1);
+    locations.push(newlocation);
+    console.log(newlocation);
+  } 
+  form.addEventListener('submit', handleForm);
