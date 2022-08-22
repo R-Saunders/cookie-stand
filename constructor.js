@@ -37,3 +37,9 @@ for (let i = 0; i < locations.length; i++) {
     console.log(locations[i].customerVisited() + ' customers visited the ' + locations[i].name + ' store and purchased a total of ' + locations[i].totalCookies() + ' cookies between ' + j + ':00 - ' + (j+1) + ':00');
   }
 }
+
+var form = document.getElementById("new_cookie_stand");
+function handleForm(event) { 
+  event.preventDefault(); 
+} 
+form.addEventListener('submit', handleForm);
