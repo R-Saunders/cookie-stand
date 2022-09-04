@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head> </head>
-  <body>
-    <form id="new_cookie_stand">
-      <fieldset>
-        <legend>Cookie Stand</legend>
-        <p>Required fields are followed by *.</p>
-        <p>
-          <label for="city">City Name:</label>
-          <input
-            type="text"
-            placeholder="City Name"
-            name="city"
-            id="city"
-            required
-          />
-        </p>
-        <p>
-          <label for="minimum">Minimum Customers:</label>
-          <input
-            type="number"
-            placeholder="0"
-            name="minimum"
-            id="minimum"
-            required
-          />
-        </p>
-        <p>
-          <label for="maximum">Maximum Customers:</label>
-          <input
-            type="number"
-            placeholder="0"
-            name="maximum"
-            id="maximum"
-            required
-          />
-        </p>
-        <p>
-          <label for="cookies">Average Cookies per Customer:</label>
-          <input
-            type="number"
-            placeholder="0"
-            name="cookies"
-            id="cookies"
-            required
-          />
-        </p>
-        <p>
-          <button type="submit">Submit</button>
-        </p>
-      </fieldset>
-    </form>
+	<head>
+		<title>Cookie Stands</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Roboto&family=Roboto+Slab&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<form id="new_cookie_stand">
+			<fieldset>
+				<legend>Cookie Stand</legend>
+				<p>Required fields are followed by *.</p>
+				<p>
+					<label for="city">City Name:</label>
+					<input
+						type="text"
+						placeholder="City Name"
+						name="city"
+						id="city"
+						required
+					/>
+				</p>
+				<p>
+					<label for="minimum">Minimum Customers:</label>
+					<input
+						type="number"
+						placeholder="0"
+						name="minimum"
+						id="minimum"
+						required
+					/>
+				</p>
+				<p>
+					<label for="maximum">Maximum Customers:</label>
+					<input
+						type="number"
+						placeholder="0"
+						name="maximum"
+						id="maximum"
+						required
+					/>
+				</p>
+				<p>
+					<label for="cookies">Average Cookies per Customer:</label>
+					<input
+						type="number"
+						placeholder="0"
+						name="cookies"
+						id="cookies"
+						required
+					/>
+				</p>
+				<p>
+					<button type="submit">Submit</button>
+				</p>
+			</fieldset>
+		</form>
 
-    <script type="text/javascript" src="constructor.js"></script>
-  </body>
+		<script type="text/javascript" src="constructor.js"></script>
+	</body>
 </html>

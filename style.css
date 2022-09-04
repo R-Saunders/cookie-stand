@@ -1,0 +1,19 @@
+* {
+  font-family: 'Roboto Slab', serif;
+  color: navy;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Caveat', cursive;
+  color: maroon;
+}
+
+.data {
+  font-family: 'Roboto', sans-serif;
+  color: darkgreen;
+}
+
+body {
+  background-color: #dcdde1;
+}
