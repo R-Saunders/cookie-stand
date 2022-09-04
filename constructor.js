@@ -31,10 +31,29 @@ let liverpool   = new locationsClass('Liverpool',4,12,4);
 // Put objects into array
 locations = [norwich, london, manchester, birmingham, liverpool];
 
-// Nest for loops to print required info
+// Nest for loops to print required info to the DOM in a table.
 for (let i = 0; i < locations.length; i++) {
   for (let j = 8; j <= 16; j++) {
-    console.log(locations[i].customerVisited() + ' customers visited the ' + locations[i].name + ' store and purchased a total of ' + locations[i].totalCookies() + ' cookies between ' + j + ':00 - ' + (j+1) + ':00');
+    let myTable = document.getElementById("sales_info");
+    let newRow = document.createElement('tr');
+    let newCell1 = document.createElement('td');
+    let newCell2 = document.createElement('td');
+    let newCell3 = document.createElement('td');
+    let newCell4 = document.createElement('td');
+    let addName = document.createTextNode(locations[i].name);
+    let addTime = document.createTextNode(j + ':00 - ' + (j+1) + ':00');
+    let addCustomers = document.createTextNode(locations[i].customerVisited());
+    let addCookies = document.createTextNode(locations[i].totalCookies());
+    newCell1.appendChild(addName);
+    newCell2.appendChild(addTime);
+    newCell3.appendChild(addCustomers);
+    newCell4.appendChild(addCookies);
+    myTable.appendChild(newRow);
+    newRow.appendChild(newCell1);
+    newRow.appendChild(newCell2);
+    newRow.appendChild(newCell3);
+    newRow.appendChild(newCell4);
+    
   }
 }
 var form = document.getElementById("new_cookie_stand");
@@ -49,3 +68,5 @@ var form = document.getElementById("new_cookie_stand");
     console.log(newlocation);
   } 
   form.addEventListener('submit', handleForm);
+
+

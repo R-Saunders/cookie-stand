@@ -9,11 +9,19 @@ h1, h2, h3, h4, h5, h6 {
   color: maroon;
 }
 
-.data {
+table, td {
   font-family: 'Roboto', sans-serif;
   color: darkgreen;
 }
 
 body {
   background-color: #dcdde1;
+}
+
+td { 
+  border: 1px black solid;
+}
+
+.fieldset {
+  
 }
