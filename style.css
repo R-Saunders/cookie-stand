@@ -1,27 +1,75 @@
 * {
   font-family: 'Roboto Slab', serif;
-  color: navy;
+  color: #2f3640;
 
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Caveat', cursive;
-  color: maroon;
+  color: #c23616;
 }
 
-table, td {
+tr td {
   font-family: 'Roboto', sans-serif;
-  color: darkgreen;
+}
+
+thead td {
+  color: white;
 }
 
 body {
   background-color: #dcdde1;
 }
 
-td { 
-  border: 1px black solid;
+fieldset {
+  background-color: #9c88ff;
+  border-radius: 1rem;
+  border: 1px #7f8fa6 solid;
+  box-shadow: 1px 2px 5px #718093;
 }
 
-.fieldset {
-  
+form {
+  display: flex;
+}
+
+legend {
+  color: #f5f6fa;
+  text-shadow: 1px 1px #718093;
+  background-color: #9c88ff;
+  border-top: 1px solid #7f8fa6;
+  border-radius: 0.5em;
+  padding: 0.25em 0.5em;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+td { 
+  border: 1px black solid;
+  padding: 0.25em 0.5em;
+}
+
+button {
+  background-color: #b6fab6;
+  border-color: #7fab78;
+  border-style: solid;
+  border-radius: 0.5em;
+  color: grey;
+}
+
+tr:nth-child(even) {
+  background-color: #7AABFF;
+  color: white;
+}
+
+thead td {
+  background-color: #6F7CE8;
+}
+
+button:hover {
+  background-color: #7fab78;
+  color: white;
 }

@@ -32,7 +32,8 @@ let liverpool   = new locationsClass('Liverpool',4,12,4);
 locations = [norwich, london, manchester, birmingham, liverpool];
 
 // Nest for loops to print required info to the DOM in a table.
-for (let i = 0; i < locations.length; i++) {
+let render = function() {
+  for (let i = 0; i < locations.length; i++) {
   for (let j = 8; j <= 16; j++) {
     let myTable = document.getElementById("sales_info");
     let newRow = document.createElement('tr');
@@ -55,7 +56,10 @@ for (let i = 0; i < locations.length; i++) {
     newRow.appendChild(newCell4);
     
   }
-}
+}}
+
+render();
+
 var form = document.getElementById("new_cookie_stand");
   function handleForm(event) { 
     event.preventDefault();
@@ -65,8 +69,9 @@ var form = document.getElementById("new_cookie_stand");
     let cookies1 = parseInt(document.getElementById("cookies").value);
     let newlocation = new locationsClass(city1, minimum1, maximum1, cookies1);
     locations.push(newlocation);
-    console.log(newlocation);
+    render();
   } 
   form.addEventListener('submit', handleForm);
+  
 
 
