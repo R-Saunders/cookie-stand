@@ -12,63 +12,78 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<form id="new_cookie_stand">
-			<fieldset>
-				<legend>Cookie Stand</legend>
-				<p>Required fields are followed by *.</p>
-				<p>
-					<label for="city">City Name:</label>
-					<input
-						type="text"
-						placeholder="City Name"
-						name="city"
-						id="city"
-						required
-					/>
-				</p>
-				<p>
-					<label for="minimum">Minimum Customers:</label>
-					<input
-						type="number"
-						placeholder="0"
-						name="minimum"
-						id="minimum"
-						required
-					/>
-				</p>
-				<p>
-					<label for="maximum">Maximum Customers:</label>
-					<input
-						type="number"
-						placeholder="0"
-						name="maximum"
-						id="maximum"
-						required
-					/>
-				</p>
-				<p>
-					<label for="cookies">Average Cookies per Customer:</label>
-					<input
-						type="number"
-						placeholder="0"
-						name="cookies"
-						id="cookies"
-						required
-					/>
-				</p>
-				<p>
-					<button type="submit">Submit</button>
-				</p>
-			</fieldset>
-		</form>
-    <table id="sales_info">
-      <thead>
-        <td>Store Location</td>
-        <td>Time Slot</td>
-        <td>No. of Customers</td>
-        <td>Cookies Purchased</td>
-      </thead>
-    </table>
+		<header>
+			<h1>Cookie Stands</h1>
+		</header>
+		<div id="hero">
+			<div id="hero-inner">
+				<h2>Cookie Stands</h2>
+				<p>Locations all over the UK</p>
+				<p>Open daily from nine til five</p>
+			</div>
+		</div>
+		<main>
+      <h2>Welcome to Cookie Stand Analytics.</h2>
+      <p>Below is a table displaying all our current locations, number of customers per hour and the cookies sold each hour too.</p>
+      <p>You will also find a form to let you add a new location and it will automatically calculate you some projections then add them to the table</p>
+			<form id="new_cookie_stand">
+				<fieldset>
+					<legend>Cookie Stand</legend>
+					<p>Required fields are followed by *.</p>
+					<p>
+						<label for="city">City Name:</label>
+						<input
+							type="text"
+							placeholder="City Name"
+							name="city"
+							id="city"
+							required
+						/>
+					</p>
+					<p>
+						<label for="minimum">Minimum Customers:</label>
+						<input
+							type="number"
+							placeholder="0"
+							name="minimum"
+							id="minimum"
+							required
+						/>
+					</p>
+					<p>
+						<label for="maximum">Maximum Customers:</label>
+						<input
+							type="number"
+							placeholder="0"
+							name="maximum"
+							id="maximum"
+							required
+						/>
+					</p>
+					<p>
+						<label for="cookies">Average Cookies per Customer:</label>
+						<input
+							type="number"
+							placeholder="0"
+							name="cookies"
+							id="cookies"
+							required
+						/>
+					</p>
+					<p>
+						<button type="submit">Submit</button>
+					</p>
+				</fieldset>
+			</form>
+			<table id="sales_info">
+				<thead>
+					<td>Store Location</td>
+					<td>Time Slot</td>
+					<td>No. of Customers</td>
+					<td>Cookies Purchased</td>
+				</thead>
+			</table>
+		</main>
 		<script type="text/javascript" src="constructor.js"></script>
 	</body>
 </html>
